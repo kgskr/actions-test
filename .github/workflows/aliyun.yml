@@ -1,0 +1,15 @@
+name: aliyun install test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  install-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: aliyun/setup-aliyun-cli-action@v1
+    
+      - run: |
+          aliyun --help
+          aliyun version
+
